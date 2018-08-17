@@ -70,15 +70,11 @@ class ViewController: UIViewController {
          */
         let myChoice = playerSign(player: sender.tag)
         let opponentChoice = randomSign()
-        //cpuLabel.isHidden = false
         playerLabel.text = "\(myChoice)"
         cpuLabel.text = "\(opponentChoice)"
-        //rockBtn.isHidden = true
-        //paperBtn.isHidden = true
-        //scissorsBtn.isHidden = true
         view.backgroundColor = UIColor.brown
         whoWinsLabel.text = "\(myChoice.didIWin(opponent: opponentChoice))"
-        //playAgainBtn.isHidden = false
+
         
         hideItems()
 
@@ -98,19 +94,14 @@ class ViewController: UIViewController {
     @IBAction func playAgain(_ sender: Any) {
         playAgainBtn.isHidden = true
 
-                view.backgroundColor = UIColor(named: "principalColor")
-        /*rockBtn.isHidden = false
-        paperBtn.isHidden = false
-        scissorsBtn.isHidden = false
-        cpuLabel.isHidden = true
-        playerLabel.isHidden = true*/
+        view.backgroundColor = UIColor(named: "principalColor")
         whoWinsLabel.text = "Rock, Paper, Scissors?"
         
         hideItems()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
 
 
