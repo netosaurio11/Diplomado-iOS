@@ -14,19 +14,42 @@
         <scene sceneID="PNu-YG-WjF">
             <objects>
                 <tableViewController id="QRc-xB-uoJ" customClass="ToDoTableViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XTf-Kw-7ys" customClass="To">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XTf-Kw-7ys">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellID" id="VWu-iD-5L7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellID" id="VWu-iD-5L7" customClass="ToDoCell" customModule="ToDoList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VWu-iD-5L7" id="hkc-7v-NX5">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUx-Sk-YnL">
+                                            <rect key="frame" x="8" y="6" width="67" height="30"/>
+                                            <state key="normal" title="Complete"/>
+                                            <connections>
+                                                <action selector="completeButtonTapped:" destination="VWu-iD-5L7" eventType="touchUpInside" id="aQQ-hb-Eti"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFx-pC-rN4">
+                                            <rect key="frame" x="83" y="10" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jFx-pC-rN4" firstAttribute="leading" secondItem="zUx-Sk-YnL" secondAttribute="trailing" constant="8" id="L7I-jt-fqr"/>
+                                        <constraint firstItem="jFx-pC-rN4" firstAttribute="baseline" secondItem="zUx-Sk-YnL" secondAttribute="baseline" id="bDR-pb-UMY"/>
+                                        <constraint firstItem="zUx-Sk-YnL" firstAttribute="centerY" secondItem="hkc-7v-NX5" secondAttribute="centerY" id="bw1-1h-vkR"/>
+                                        <constraint firstItem="zUx-Sk-YnL" firstAttribute="leading" secondItem="hkc-7v-NX5" secondAttribute="leading" constant="8" id="tYc-Tq-Hpc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="zUx-Sk-YnL" id="055-Tm-Srk"/>
+                                    <outlet property="titleLabel" destination="jFx-pC-rN4" id="uah-Pt-3S4"/>
                                     <segue destination="3lO-IP-qn4" kind="show" identifier="showDetails" id="1gS-SO-urF"/>
                                 </connections>
                             </tableViewCell>
@@ -46,7 +69,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSO-KJ-Oxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="815"/>
+            <point key="canvasLocation" x="504.80000000000001" y="814.54272863568224"/>
         </scene>
         <!--New To Do-->
         <scene sceneID="X6e-Kl-wY1">
