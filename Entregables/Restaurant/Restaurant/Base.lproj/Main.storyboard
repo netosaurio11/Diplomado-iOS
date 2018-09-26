@@ -151,13 +151,73 @@
                     <view key="view" contentMode="scaleToFill" id="PD1-Al-Lxf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X6N-2O-NMF">
+                                <rect key="frame" x="16" y="124" width="343" height="149"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3I3-kX-niu">
+                                <rect key="frame" x="16" y="281" width="255" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S20-WG-RJP">
+                                <rect key="frame" x="279" y="281" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="NWk-KQ-R01"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L66-9x-WSZ">
+                                <rect key="frame" x="16" y="313" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqj-DA-bYp">
+                                <rect key="frame" x="16" y="580" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add To Order">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToOrderButtonTapped:" destination="Y82-PS-y2x" eventType="touchUpInside" id="6SH-7D-rbx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X6N-2O-NMF" firstAttribute="leading" secondItem="cq6-7N-NgW" secondAttribute="leading" constant="16" id="0Lv-nM-xee"/>
+                            <constraint firstItem="gqj-DA-bYp" firstAttribute="leading" secondItem="cq6-7N-NgW" secondAttribute="leading" constant="16" id="2UU-FL-UZV"/>
+                            <constraint firstItem="cq6-7N-NgW" firstAttribute="trailing" secondItem="X6N-2O-NMF" secondAttribute="trailing" constant="16" id="4bp-GY-GIf"/>
+                            <constraint firstItem="L66-9x-WSZ" firstAttribute="top" secondItem="3I3-kX-niu" secondAttribute="bottom" constant="8" id="5vK-SC-oTn"/>
+                            <constraint firstItem="cq6-7N-NgW" firstAttribute="trailing" secondItem="S20-WG-RJP" secondAttribute="trailing" constant="16" id="6UA-l8-Nlv"/>
+                            <constraint firstItem="cq6-7N-NgW" firstAttribute="trailing" secondItem="L66-9x-WSZ" secondAttribute="trailing" constant="16" id="9Rj-hj-Gcc"/>
+                            <constraint firstItem="3I3-kX-niu" firstAttribute="leading" secondItem="cq6-7N-NgW" secondAttribute="leading" constant="16" id="CSc-oR-mZm"/>
+                            <constraint firstItem="3I3-kX-niu" firstAttribute="top" secondItem="X6N-2O-NMF" secondAttribute="bottom" constant="8" id="Ovl-fD-Ird"/>
+                            <constraint firstItem="X6N-2O-NMF" firstAttribute="top" secondItem="cq6-7N-NgW" secondAttribute="top" constant="8" id="WMJ-jy-44z"/>
+                            <constraint firstItem="cq6-7N-NgW" firstAttribute="trailing" secondItem="gqj-DA-bYp" secondAttribute="trailing" constant="16" id="XGV-Jq-Acz"/>
+                            <constraint firstItem="cq6-7N-NgW" firstAttribute="bottom" secondItem="gqj-DA-bYp" secondAttribute="bottom" constant="8" id="aGJ-JH-bSr"/>
+                            <constraint firstItem="S20-WG-RJP" firstAttribute="top" secondItem="X6N-2O-NMF" secondAttribute="bottom" constant="8" id="fbD-GB-t9V"/>
+                            <constraint firstItem="cq6-7N-NgW" firstAttribute="bottom" secondItem="X6N-2O-NMF" secondAttribute="bottom" constant="345" id="qnv-J3-jtV"/>
+                            <constraint firstItem="S20-WG-RJP" firstAttribute="leading" secondItem="3I3-kX-niu" secondAttribute="trailing" constant="8" id="vcf-Bl-vre"/>
+                            <constraint firstItem="L66-9x-WSZ" firstAttribute="leading" secondItem="cq6-7N-NgW" secondAttribute="leading" constant="16" id="yQs-hf-0WZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cq6-7N-NgW"/>
                     </view>
+                    <connections>
+                        <outlet property="addToOrderButton" destination="gqj-DA-bYp" id="q9d-Fb-GeR"/>
+                        <outlet property="descriptionLabel" destination="L66-9x-WSZ" id="CBL-AD-bEr"/>
+                        <outlet property="imageView" destination="X6N-2O-NMF" id="lvr-8X-xk1"/>
+                        <outlet property="priceLabel" destination="S20-WG-RJP" id="5Bh-Pg-rNY"/>
+                        <outlet property="titleLabel" destination="3I3-kX-niu" id="v2h-jh-T2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6w-2I-wyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3415" y="-21"/>
+            <point key="canvasLocation" x="3413.5999999999999" y="-21.139430284857571"/>
         </scene>
         <!--Menu-->
         <scene sceneID="1hC-UT-J7q">
